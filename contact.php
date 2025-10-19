@@ -64,10 +64,10 @@
         </div>
 
         <nav class="navbar" id="navbar">
-            <a href="home.html">Home</a>
-            <a href="index.html">Products</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="home.php">Home</a>
+            <a href="index.php">Products</a>
+            <a href="about.php">About Us</a>
+            <a href="contact.php">Contact Us</a>
             <a href="login.html" class="login-link">Login</a>
             <a href="register.html" class="register-link">Register</a>
             <a href="profile.html" class="profile-link" style="display: none;">Profile</a>
@@ -129,4 +129,5 @@
         });
         </script>
     </body>
+
 </html>
