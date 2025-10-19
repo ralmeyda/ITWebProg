@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+        <a href="home.html" class="logo">CYCRIDE</a>
+        
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="navbar" id="navbar">
+            <a href="home.html">Home</a>
+            <a href="index.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="login.html" class="login-link">Login</a>
+            <a href="register.html" class="register-link">Register</a>
+            <a href="profile.html" class="profile-link" style="display: none;">Profile</a>
+            <div id="user-info" style="display: inline-block; margin-left: 20px;"></div>
+        </nav>
+
+        <div id="cart-icon">
+            <i class="ri-shopping-bag-line"></i>
+            <span class="cart-item-count"></span>
+        </div>
+        </header>
+        <div class="cart">
+            <h2 class="cart-title">Your Cart</h2>
+            <div class="cart-content">
+            
+            </div>
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">0</div>
+            </div>
+            <button class="btn-buy">Buy Now</button>
+            <i class="ri-close-line" id="cart-close"></i>
+        </div>
+
+        <section class="shop">
+            <h1 class="section-title">Shop Products</h1>
+            <div class="product-content">
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/product2.jpg">
+                    </div>
+                    <h2 class="product-title">2024 S-Works Tarmac SL8</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP15,000</p>
+                        <span class="price" style="visibility:hidden;">15000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/product3.jpg">
+                    </div>
+                    <h2 class="product-title">Specialized Aethos S-Works Di2 Gloss</h2>
+                    <div class="price-and-cart"> 
+                        <p style="font-weight:600;">PHP25,000</p>
+                        <span class="price" style="visibility:hidden;">25000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/product4.jpg">
+                    </div>
+                    <h2 class="product-title">Specialized S-Works Tarmac SL7 Frameset</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP35,000</p>
+                        <span class="price" style="visibility:hidden;">35000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/product5.jpg">
+                    </div>
+                    <h2 class="product-title">Trek Domane+ SLR 7 AXS Electric Carbon Road Bike 2025 Red Smoke</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP55,000</p>
+                        <span class="price" style="visibility:hidden;">55000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/product7.jpg">
+                    </div>
+                    <h2 class="product-title">Cervélo R5</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP65,000</p>
+                        <span class="price" style="visibility:hidden;">65000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/product7.jpg">
+                    </div>
+                    <h2 class="product-title">Cervélo Ultegra DI2</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP75,000</p>
+                        <span class="price" style="visibility:hidden;">75000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/pinarello.png">
+                    </div>
+                    <h2 class="product-title">PINARELLO F7 ULTEGRA Di2</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP85,000</p>
+                        <span class="price" style="visibility:hidden;">85000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/pinarelloprince.png">
+                    </div>
+                    <h2 class="product-title">Pinarello Prince 2022 - Shimano Ultegra Di2 2x12sp</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP55,000</p>
+                        <span class="price" style="visibility:hidden;">55000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/helm1.png">
+                    </div>
+                    <h2 class="product-title">ASIEVIE Bike Helmet</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP5,000</p>
+                        <span class="price" style="visibility:hidden;">5000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/helm2.png">
+                    </div>
+                    <h2 class="product-title">Giro Fixture MIPS Mtb Helmet</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP4,000</p>
+                        <span class="price" style="visibility:hidden;">4000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/helm3.png">
+                    </div>
+                    <h2 class="product-title">Meigu Bicycle Helmet Ultralight</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP5,000</p>
+                        <span class="price" style="visibility:hidden;">5000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/helm4.png">
+                    </div>
+                    <h2 class="product-title">SPYDER Carve S3 Bike Helmet</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP7,000</p>
+                        <span class="price" style="visibility:hidden;">7000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/helm5.png">
+                    </div>
+                    <h2 class="product-title">Limar Maloja Road Helmet</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP3,500</p>
+                        <span class="price" style="visibility:hidden;">3500</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/helm6.png">
+                    </div>
+                    <h2 class="product-title">ROCKBROS Lightweight Bicycle Helmet</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP2,024</p>
+                        <span class="price" style="visibility:hidden;">2024</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/helm7.png">
+                    </div>
+                    <h2 class="product-title">Specialized Align II</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP3,354</p>
+                        <span class="price" style="visibility:hidden;">3354</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/helm8.png">
+                    </div>
+                    <h2 class="product-title">Giro Eclipse Spherical Helmet</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP15,000</p>
+                        <span class="price" style="visibility:hidden;">15000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/bframe1.png">
+                    </div>
+                    <h2 class="product-title">Cervelo S5 Disc Road Frameset 2020</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP150,000</p>
+                        <span class="price" style="visibility:hidden;">150000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/bframe2.png">
+                    </div>
+                    <h2 class="product-title">Cervelo S5 2025 Road Frame</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP185,000</p>
+                        <span class="price" style="visibility:hidden;">180000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/bframe3.png">
+                    </div>
+                    <h2 class="product-title">TREK PROCALIBER 2023 FRAME</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP95,000</p>
+                        <span class="price" style="visibility:hidden;">95000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/bframe4.png">
+                    </div>
+                    <h2 class="product-title">TREK EMONDA SLR DISC FRAMESET 2021</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP120,000</p>
+                        <span class="price" style="visibility:hidden;">120000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/bframe5.png">
+                    </div>
+                    <h2 class="product-title">Giant Propel Advanced Sl-ff 2024 Road Frame</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP210,000</p>
+                        <span class="price" style="visibility:hidden;">210000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/bframe6.png">
+                    </div>
+                    <h2 class="product-title">2024 Giant Tcr Advanced Pro Disc Frameset</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP61,000</p>
+                        <span class="price" style="visibility:hidden;">61000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/bframe7.png">
+                    </div>
+                    <h2 class="product-title">Giant Tcr Advanced Sl-ff 2024 Road Frame</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP206,000</p>
+                        <span class="price" style="visibility:hidden;">206000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+                <div class="product-box">
+                    <div class="img-box">
+                        <img src="images/bframe8.png">
+                    </div>
+                    <h2 class="product-title">Giant Propel Advanced Sl 2025 Road Frame</h2>
+                    <div class="price-and-cart">
+                        <p style="font-weight:600;">PHP210,000</p>
+                        <span class="price" style="visibility:hidden;">210000</span>
+                        <i class="ri-shopping-bag-line add-cart"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="cart-notification">Product added to cart!</div>
+        <script src="script.js"></script>
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const nav = document.getElementById('navbar');
+
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        });
+        </script>
+        
+    </body>
+</html>
