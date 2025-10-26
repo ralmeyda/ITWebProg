@@ -1,0 +1,3 @@
+Para hindi magulo, plain website (EMPTY PRODUCT) muna gawin natin.
+After maayos lahat doon nalang i-add mga products USING admin ADD PRODUCT. 
+Need lang CAUTION sa pwedeng apektado nung HTML or CSS changes.
