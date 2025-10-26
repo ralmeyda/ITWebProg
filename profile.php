@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <a href="home.html" class="logo">CYCRIDE</a>
+        <a href="home.php" class="logo">CYCRIDE</a>
 
         <div class="hamburger" id="hamburger">
             <span></span>
@@ -16,11 +16,11 @@
         </div>
 
         <nav class="navbar" id="navbar">
-            <a href="home.html">Home</a>
-            <a href="index.html">Products</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="profile.html" class="profile-link">Profile</a>
+            <a href="home.php">Home</a>
+            <a href="index.php">Products</a>
+            <a href="about.php">About Us</a>
+            <a href="contact.php">Contact Us</a>
+            <a href="profile.php" class="profile-link">Profile</a>
         </nav>
 
         <div id="cart-icon">
