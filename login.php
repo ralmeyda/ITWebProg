@@ -41,35 +41,50 @@
         <p>Don't have an account? <a href="register.html" style="color:orange;">Register here</a></p>
     </div>
     <script>
-        document.getElementById("loginForm").addEventListener("submit", function(e) {
-            e.preventDefault();
-
-            const loginUsername = document.getElementById("loginUsername").value;
-            const loginPassword = document.getElementById("loginPassword").value;
-
-            const userData = JSON.parse(localStorage.getItem("userData"));
-
-            if (userData && userData.username === loginUsername && userData.password === loginPassword) {
-                alert("Login successful!");
-                
-                // ✅ Set the logged-in username key
-                localStorage.setItem("username", userData.username);
-
-                window.location.href = "index.html";
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData();
+    formData.append('username', document.getElementById("loginUsername").value);
+    formData.append('password', document.getElementById("loginPassword").value);
+    
+    fetch('login_process.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.message);
+            // Store minimal data in localStorage for JS access
+            localStorage.setItem("username", data.user.username);
+            localStorage.setItem("userId", data.user.user_id);
+            
+            // Redirect based on user type
+            if (data.user.user_type === 'admin') {
+                window.location.href = "admin/dashboard.php";
             } else {
-                alert("Invalid username or password.");
+                window.location.href = "index.php";
             }
-        });
+        } else {
+            alert(data.message);
+        }
+    })
+    .catch(error => {
+        alert("Login failed. Please try again.");
+        console.error('Error:', error);
+    });
+});
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.getElementById('hamburger');
-            const nav = document.getElementById('navbar');
-
-            hamburger.addEventListener('click', () => {
-                nav.classList.toggle('active');
-            });
-        });
-    </script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('navbar');
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+});
+</script>
 </body>
 
 </html>
+
