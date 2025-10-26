@@ -38,7 +38,7 @@
             <input type="password" id="loginPassword" placeholder="Password" required>
             <button type="submit">Login</button>
         </form>
-        <p>Don't have an account? <a href="register.html" style="color:orange;">Register here</a></p>
+        <p>Don't have an account? <a href="register.php" style="color:orange;">Register here</a></p>
     </div>
     <script>
         document.getElementById("loginForm").addEventListener("submit", function(e) {
@@ -55,7 +55,7 @@
                 // ✅ Set the logged-in username key
                 localStorage.setItem("username", userData.username);
 
-                window.location.href = "index.html";
+                window.location.href = "index.php";
             } else {
                 alert("Invalid username or password.");
             }
