@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 26, 2025 at 08:09 AM
+-- Generation Time: Oct 26, 2025 at 02:01 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -53,9 +53,9 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`category_id`, `category_name`, `description`, `created_at`) VALUES
-(1, 'Bikes', 'Complete bicycle models', '2025-10-25 05:19:11'),
-(2, 'Helmets', 'Safety helmets for cycling', '2025-10-25 05:19:11'),
-(3, 'Frames', 'Bicycle frames and framesets', '2025-10-25 05:19:11');
+(1, 'Bikes', 'Complete bicycle models', '2025-10-26 12:47:41'),
+(2, 'Helmets', 'Safety helmets for cycling', '2025-10-26 12:47:41'),
+(3, 'Frames', 'Bicycle frames and framesets', '2025-10-26 12:47:41');
 
 -- --------------------------------------------------------
 
@@ -131,7 +131,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `first_name`, `last_name`, `phone`, `address`, `user_type`, `created_at`, `last_login`) VALUES
-(1, 'admin', 'admin@cycride.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Admin', 'User', '09123456789', NULL, 'admin', '2025-10-25 05:19:11', NULL);
+(1, 'admin', 'admin@cycride.com', '$2y$10$LfZoTVAn99I/r./DmAqQj.JjTMJuWmen0O2GzVlYXLXH3maawSJYW', 'Admin', 'User', '09123456789', NULL, 'admin', '2025-10-26 12:52:03', '2025-10-26 12:52:30'),
+(2, 'mcl.salazar', 'salazar.322412@bacoor.sti.edu.ph', '$2y$10$kuWwKsq06yYcKuW5mLkO6eakTJJDW7ab/cQezOwR1HGNuhsCZev4G', 'Mc Lorenz', 'Salazar', '09063744296', NULL, 'customer', '2025-10-26 12:59:49', '2025-10-26 13:00:01');
 
 --
 -- Indexes for dumped tables
@@ -224,7 +225,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
