@@ -38,7 +38,7 @@
             <input type="password" id="loginPassword" placeholder="Password" required>
             <button type="submit">Login</button>
         </form>
-        <p>Don't have an account? <a href="register.html" style="color:orange;">Register here</a></p>
+        <p>Don't have an account? <a href="register.php" style="color:orange;">Register here</a></p>
     </div>
     <script>
 document.getElementById("loginForm").addEventListener("submit", function(e) {
