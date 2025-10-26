@@ -9,7 +9,7 @@
     </head>
     <body>
         <header>
-        <a href="home.html" class="logo">CYCRIDE</a>
+        <a href="home.php" class="logo">CYCRIDE</a>
         
         <div class="hamburger" id="hamburger">
             <span></span>
@@ -18,13 +18,13 @@
         </div>
 
         <nav class="navbar" id="navbar">
-            <a href="home.html">Home</a>
-            <a href="index.html">Products</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="login.html" class="login-link">Login</a>
-            <a href="register.html" class="register-link">Register</a>
-            <a href="profile.html" class="profile-link" style="display: none;">Profile</a>
+            <a href="home.php">Home</a>
+            <a href="index.php">Products</a>
+            <a href="about.php">About Us</a>
+            <a href="contact.php">Contact Us</a>
+            <a href="login.php" class="login-link">Login</a>
+            <a href="register.php" class="register-link">Register</a>
+            <a href="profile.php" class="profile-link" style="display: none;">Profile</a>
         </nav>
 
         <div id="cart-icon">
@@ -40,7 +40,7 @@
             <img src="images/giantlogo.jpg" alt="Giant">
         </section>
         <div class="buy-now-wrapper">
-        <a href="index.html" class="buy-now-btn">Buy Now</a>
+        <a href="index.php" class="buy-now-btn">Buy Now</a>
         </div>
 
         <script src="script.js"></script>
