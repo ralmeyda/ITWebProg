@@ -4,7 +4,7 @@ require_once 'config.php';
 // Redirect if already logged in
 if (isLoggedIn()) {
     if (isAdmin()) {
-        header('Location: admin/dashboard.php');
+        header('Location: dashboard.php');
     } else {
         header('Location: index.php');
     }
