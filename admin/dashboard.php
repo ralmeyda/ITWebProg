@@ -1,11 +1,13 @@
+
 <?php
-require_once '../config.php';
-require_once 'admin_functions.php';
 
-requireAdmin();
+//require_once '../config.php';
+#require_once 'admin_functions.php';
 
-$stats = getDashboardStats();
-$username = getCurrentUsername();
+#requireAdmin();
+
+#$stats = getDashboardStats();
+##$username = getCurrentUsername();
 ?>
 <!DOCTYPE html>
 <html>
