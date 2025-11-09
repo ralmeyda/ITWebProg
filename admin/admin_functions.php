@@ -161,4 +161,8 @@ function getDashboardStats() {
     
     return $stats;
 }
+
+function clean($data) {
+    return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
+}
 ?>
