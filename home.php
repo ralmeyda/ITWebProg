@@ -26,7 +26,7 @@
             <a href="register.php" class="register-link">Register</a>
             <a href="profile.php" class="profile-link" style="display: none;">Profile</a>
         </nav>
-
+        
         <div id="cart-icon">
         </div>
         </header>

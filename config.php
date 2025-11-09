@@ -40,4 +40,6 @@ function getCurrentUserId() {
 function getCurrentUsername() {
     return $_SESSION['username'] ?? null;
 }
+
+
 ?>
