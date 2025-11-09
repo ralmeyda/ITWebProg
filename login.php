@@ -4,7 +4,7 @@ require_once 'config.php';
 // Redirect if already logged in
 if (isLoggedIn()) {
     if (isAdmin()) {
-        header('Location: admin/dashboard.php');
+        header('Location: dashboard.php');
     } else {
         header('Location: index.php');
     }
@@ -27,20 +27,10 @@ if (isLoggedIn()) {
             <span></span>
             <span></span>
         </div>
-        
         <nav class="navbar" id="navbar">
             <a href="home.php">Home</a>
-            <a href="index.php">Products</a>
-            <a href="about.php">About Us</a>
-            <a href="contact.php">Contact Us</a>
-            <a href="login.php" class="login-link">Login</a>
             <a href="register.php" class="register-link">Register</a>
         </nav>
-        
-        <div id="cart-icon">
-            <i class="ri-shopping-bag-line"></i>
-            <span class="cart-item-count"></span>
-        </div>
     </header>
     
     <div class="form-container" style="margin-top: 120px;">
