@@ -1,13 +1,35 @@
 
 <?php
 
+
+require_once '../functions.php';
+require_once 'admin_functions.php'; // ✅ make sure the file path is correct
+
+// ✅ Optionally include authentication check
+// requireAdmin();
+
+// ✅ Fetch dashboard stats
+$stats = getDashboardStats();
+
+// ✅ You can set $username if you have session data
+$username = $_SESSION['username'] ?? 'Admin';
+
+
+
+/*
+OLD, DELETE IF NOT NEEDED
+require_once '../functions.php';
+$cleaned_data = clean($data); 
 //require_once '../config.php';
 #require_once 'admin_functions.php';
 
 #requireAdmin();
 
-#$stats = getDashboardStats();
+$stats = getDashboardStats();
 ##$username = getCurrentUsername();
+*/
+
+
 ?>
 <!DOCTYPE html>
 <html>
