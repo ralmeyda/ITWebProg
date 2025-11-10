@@ -5,17 +5,19 @@ require_once '../functions.php';
 
 requireAdmin();
 
-$id = intval($_GET['id']);
+if (isset($_GET['id'])) {
+    $product_id = intval($_GET['id']);
+    $result = deleteProduct($product_id);
 
-if ($id > 0) {
-    $result = deleteProduct($id);
     if ($result['success']) {
-        header('Location: manage_products.php?deleted=1');
+        header("Location: manage_products.php?deleted=1");
         exit;
     } else {
-        die("Error: " . $result['message']);
+        header("Location: manage_products.php?error=1");
+        exit;
     }
 } else {
-    die("Invalid product ID.");
+    header("Location: manage_products.php");
+    exit;
 }
 ?>

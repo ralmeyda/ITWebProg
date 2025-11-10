@@ -73,6 +73,7 @@ function getAllProductsAdmin() {
     $sql = "SELECT p.*, c.category_name 
             FROM products p 
             LEFT JOIN categories c ON p.category_id = c.category_id 
+            WHERE p.is_active = TRUE
             ORDER BY p.created_at DESC";
     
     $result = $conn->query($sql);
@@ -162,7 +163,10 @@ function getDashboardStats() {
     return $stats;
 }
 
+
+/* Added to functions.php instead
 function clean($data) {
     return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
 }
+*/
 ?>
