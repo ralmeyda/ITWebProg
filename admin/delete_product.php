@@ -1,21 +1,25 @@
 <?php
 require_once '../config.php';
 require_once 'admin_functions.php';
-require_once '../functions.php';
 
 requireAdmin();
 
-$id = intval($_GET['id']);
-
-if ($id > 0) {
-    $result = deleteProduct($id);
-    if ($result['success']) {
-        header('Location: manage_products.php?deleted=1');
-        exit;
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $productId = intval($_POST['product_id'] ?? 0);
+    
+    if ($productId > 0) {
+        $result = deleteProduct($productId);
+        
+        if ($result['success']) {
+            header('Location: manage_products.php?deleted=1');
+        } else {
+            header('Location: manage_products.php?error=delete_failed');
+        }
     } else {
-        die("Error: " . $result['message']);
+        header('Location: manage_products.php?error=invalid_id');
     }
 } else {
-    die("Invalid product ID.");
+    header('Location: manage_products.php');
 }
+exit;
 ?>
