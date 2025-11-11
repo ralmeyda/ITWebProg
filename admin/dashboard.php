@@ -152,7 +152,7 @@ $stats = getDashboardStats();
                 <a href="manage_products.php">
                     <i class="ri-list-check"></i> Manage Products
                 </a>
-                <a href="../index.php">
+                <a href="products.php">
                     <i class="ri-store-2-line"></i> View Store
                 </a>
             </div>

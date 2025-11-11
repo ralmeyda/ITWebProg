@@ -164,7 +164,7 @@ if (isset($_GET['added'])) {
         <a href="dashboard.php" class="logo">CYCRIDE ADMIN</a>
         <nav class="navbar">
             <a href="dashboard.php">Dashboard</a>
-            <a href="add_product.php">Add Product</a>
+            <a href="products.php">View Store</a>
             <a href="../logout_process.php" style="color: #ff4444;">Logout</a>
         </nav>
     </header>
