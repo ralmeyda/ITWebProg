@@ -63,7 +63,21 @@ function deleteProduct($productId) {
         return ['success' => false, 'message' => 'Failed to delete product: ' . $conn->error];
     }
 }
-
+/*
+* Restore product
+*/
+function restoreProduct($productId) {
+    global $conn;
+    
+    $stmt = $conn->prepare("UPDATE products SET is_active = TRUE WHERE product_id = ?");
+    $stmt->bind_param("i", $productId);
+    
+    if ($stmt->execute()) {
+        return ['success' => true, 'message' => 'Product restored successfully'];
+    } else {
+        return ['success' => false, 'message' => 'Failed to restore product: ' . $conn->error];
+    }
+}
 /**
  * Get all products (including inactive for admin)
  */
