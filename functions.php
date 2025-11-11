@@ -15,6 +15,11 @@ require_once 'config.php';
  * @param string $phone
  * @return array ['success' => bool, 'message' => string]
  */
+
+function clean($data) {
+    return htmlspecialchars(strip_tags(trim($data)));
+}
+
 function registerUser($username, $email, $password, $firstName, $lastName, $phone) {
     global $conn;
     
@@ -220,6 +225,24 @@ function addToCart($userId, $productId, $quantity = 1) {
 /**
  * Get user cart items
  */
+
+
+/** 
+ * CART COUNT 
+*/
+function getCartCount($userId) {
+    global $conn;
+
+    $query = "SELECT SUM(quantity) AS total_items FROM cart WHERE user_id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $userId);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+
+    return $row['total_items'] ?? 0;
+}
+
 function getCartItems($userId) {
     global $conn;
     
