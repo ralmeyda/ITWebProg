@@ -1,6 +1,7 @@
 <?php
 require_once '../config.php';
 require_once 'admin_functions.php';
+require_once '../functions.php';
 
 requireAdmin();
 
