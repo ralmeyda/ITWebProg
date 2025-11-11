@@ -10,6 +10,13 @@ $cartCount = 0;
 if (isLoggedIn()) {
     $cartCount = getCartCount(getCurrentUserId());
 }
+// If user is not logged in to the system, user cannot add product to cart and purchase.
+if (isset($_POST['action']) && ($_POST['action'] === 'add_to_cart' || $_POST['action'] === 'purchase')) {
+    if (!isLoggedIn()) {
+        echo json_encode(['success' => false, 'message' => 'You must be logged in to perform this action.']);
+        exit;
+    }
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,6 +27,33 @@ if (isLoggedIn()) {
             rel="stylesheet"
         />
         <title>Products - CYCRIDE</title>
+        <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const isLoggedIn = <?php echo json_encode(isLoggedIn()); ?>;
+    const addCartButtons = document.querySelectorAll('.add-cart');
+    const buyNowButton = document.querySelector('.btn-buy');
+
+    addCartButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            if (!isLoggedIn) {
+                e.preventDefault();
+                alert('Please log in before adding items to your cart.');
+                window.location.href = 'login.php';
+                return;
+            }
+        });
+    });
+
+    buyNowButton.addEventListener('click', (e) => {
+        if (!isLoggedIn) {
+            e.preventDefault();
+            alert('You must log in to purchase products.');
+            window.location.href = 'login.php';
+            return;
+        }
+    });
+});
+</script>
     </head>
     <body>
         <header>
